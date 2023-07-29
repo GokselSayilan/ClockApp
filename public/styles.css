@@ -1,0 +1,38 @@
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 700;
+    letter-spacing: -5px;
+    font-size: 200px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 56px;
+}
+
+h3 {
+    font-weight: 700;
+
+    font-size: 24px;
+}
+
+h4 {
+    font-style: 20px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}

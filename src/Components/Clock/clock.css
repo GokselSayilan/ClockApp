@@ -1,0 +1,406 @@
+.loadWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.clock {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.clockBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.blackOutBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.35);
+}
+
+@keyframes scrollUpAnimation {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -50vh;
+    }
+}
+
+@keyframes scrollDownAnimation {
+    from {
+        top: -50vh;
+
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+.clockWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 56px 165px 98px 165px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.scrollUp {
+    transition: 0.7s;
+    transition-duration: 0.7s;
+    animation: scrollUpAnimation 0.7s forwards;
+    /* 0.5 saniyelik yukarı kaydırma animasyonu */
+}
+
+.scrollDown {
+    transition: 0.7s;
+    transition-duration: 0.7s;
+    animation: scrollDownAnimation 0.7s forwards;
+    /* 0.5 saniyelik yukarı kaydırma animasyonu */
+}
+
+
+.clockWrapperTop {
+    width: 570px;
+}
+
+.clockWrapperQuoteTop {
+    display: flex;
+    align-items: baseline;
+}
+
+.clockWrapperQuoteTopDesc {
+    line-height: 30px;
+    color: white;
+}
+
+.clockWrapperQuoteTopIcon {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.clockWrapperQuoteBottom {
+    margin-top: 20px;
+}
+
+.clockWrapperQuoteBottomAuthor {
+    color: white;
+}
+
+.clockWrapperBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.clockTime {
+    color: white;
+}
+
+.clockTimeTop {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.clockTimeTopTitle {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.clockTimeMiddle {
+    display: flex;
+    align-items: baseline;
+}
+
+.clockTimeMiddleDesc {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.clokTimeBottomTitle {
+    text-transform: uppercase;
+}
+
+
+.clockMoreButton {
+    width: 150px;
+    height: 60px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.clockMoreButtonIconWrapper {
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.clockMoreButtonIconWrapper:hover {
+    background: #999999;
+}
+
+.reverse {
+    transform: rotate(180deg);
+}
+
+
+
+.detailComponent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    padding: 70px 400px 70px 165px;
+    display: flex;
+    align-items: center;
+    color: #303030;
+
+}
+
+.detailComponentNight {
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+
+}
+
+
+.none {
+    display: none;
+}
+
+
+.detailComponentItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.detailComponentItemTitle {
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.detailComponentSep {
+    margin-right: 94px;
+    margin-left: 147px;
+    height: 250px;
+    border: 1px solid #bababa;
+}
+
+.clockBgTablet {
+    display: none;
+}
+
+@media (max-width:800px) {
+    .clockBg {
+        display: none;
+    }
+    .clockBgTablet {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .clockWrapper {
+        padding: 80px 131px 64px 64px;
+
+    }
+
+    .clockTimeTopTitle {
+        font-size: 18px;
+        width: 450px;
+    }
+
+    .clockTimeMiddleTitle {
+        font-size: 175px;
+    }
+
+    .clockTimeMiddleDesc {
+        font-size: 32px;
+    }
+
+    .clokTimeBottomTitle {
+       font-size: 18px;
+    }
+
+    .clockWrapperBottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: unset;
+    }
+
+    
+    .clockMoreButton {
+     margin-top: 80px;
+    }
+
+    .detailComponent {
+        height: 40vh;
+        padding: 119px 166px 119px 64px;
+    
+    }
+
+    
+    .detailComponentItem {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 50px;
+        margin-right: 80px;
+    }
+    
+    .detailComponentItemTitle {
+        font-size: 13px;
+        width: 200px;
+
+    }
+
+    .detailComponentItemDesc {
+        font-size: 40px;
+    }
+
+    
+    .detailComponentSep {
+        display: none;
+    }
+}
+
+@media (max-width:500px) {
+    .clockWrapper {
+        padding: 30px;
+
+    }
+    .clockWrapperQuoteTopDesc {
+        font-size: 12px;
+        width: 290px;
+        line-height: 25px;
+    }
+
+    .clockWrapperQuoteBottomAuthor {
+        font-size: 12px;
+    }
+
+    .clockTimeTopTitle {
+        font-size: 15px;
+        width: 300px;
+    }
+
+    .currently {
+        display: none;
+    }
+
+    .clockTimeMiddleTitle {
+        font-size: 100px;
+    }
+
+    .clockTimeMiddleDesc {
+        font-size: 15px;
+    }
+
+    .clokTimeBottomTitle {
+       font-size: 15px;
+    }
+
+    .clockWrapperBottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: unset;
+    }
+
+    
+    .clockMoreButton {
+     margin-top: 50px;
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+
+
+    .clockMoreButtonIconWrapper {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .detailComponent {
+        height: 40vh;
+        padding: 48px 26px;
+        flex-direction: column;
+        align-items: unset;
+        justify-self: unset;
+        width: 100%;
+        
+        
+        
+    }
+
+
+    
+    .detailComponentItem {
+        display: flex;
+        flex-direction: unset;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0px;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    
+    .detailComponentItemTitle {
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .detailComponentItemDesc {
+        font-size: 20px;
+    }
+    
+
+
+}
